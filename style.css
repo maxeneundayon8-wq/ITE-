@@ -1,0 +1,532 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px 15px;
+
+    font-family:
+        Georgia,
+        'Times New Roman',
+        serif;
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            #8f3f4f,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            #5c1728,
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f7e7ea,
+            #efd0d6,
+            #d9aeb8
+        );
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.card {
+
+    width: min(720px, 100%);
+
+    padding: 35px 28px;
+
+    text-align: center;
+
+    background: #fffafa;
+
+    border: 3px solid #7b1e32;
+
+    border-radius: 25px;
+
+    box-shadow:
+
+        0 20px 60px
+        rgba(76, 15, 30, 0.35);
+
+    position: relative;
+
+    animation: showCard 1s ease;
+
+}
+
+
+/* =========================
+   TOP DECORATION
+========================= */
+
+.top-decoration {
+
+    color: #7b1e32;
+
+    font-size: 25px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================
+   SMALL TITLE
+========================= */
+
+.small-title {
+
+    color: #8b4555;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+}
+
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+h1 {
+
+    margin-top: 10px;
+
+    color: #6d172b;
+
+    font-size:
+        clamp(
+            2.3rem,
+            8vw,
+            4rem
+        );
+
+    line-height: 1.1;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================
+   LINE
+========================= */
+
+.line {
+
+    width: 100px;
+
+    height: 4px;
+
+    margin: 20px auto;
+
+    background: #7b1e32;
+
+    border-radius: 10px;
+
+}
+
+
+/* =========================
+   PICTURE
+========================= */
+
+.picture-container {
+
+    padding: 8px;
+
+    background: #7b1e32;
+
+    border-radius: 18px;
+
+    box-shadow:
+
+        0 12px 30px
+        rgba(77, 17, 31, 0.3);
+
+}
+
+
+.picture-container img {
+
+    width: 100%;
+
+    display: block;
+
+    border-radius: 12px;
+
+}
+
+
+/* =========================
+   MESSAGE TITLE
+========================= */
+
+h2 {
+
+    margin-top: 25px;
+
+    color: #721b30;
+
+    font-size: 1.8rem;
+
+}
+
+
+/* =========================
+   MESSAGE BOX
+========================= */
+
+.message {
+
+    margin-top: 18px;
+
+    padding: 20px;
+
+    background: #f8e9ec;
+
+    border-left:
+        5px solid #7b1e32;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+}
+
+
+.message p {
+
+    color: #54202c;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+}
+
+
+.message p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================
+   SIGNATURE
+========================= */
+
+.signature {
+
+    margin-top: 20px;
+
+    color: #6d172b;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+}
+
+
+.signature strong {
+
+    font-size: 20px;
+
+}
+
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+#musicButton {
+
+    margin-top: 25px;
+
+    padding: 13px 28px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #7b1e32;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-family:
+        Georgia,
+        'Times New Roman',
+        serif;
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 8px 20px
+        rgba(123, 30, 50, 0.35);
+
+    transition: 0.3s;
+
+}
+
+
+#musicButton:hover {
+
+    background: #5f1426;
+
+    transform: translateY(-3px);
+
+}
+
+
+#musicButton:active {
+
+    transform: scale(0.96);
+
+}
+
+
+/* =========================
+   MUSIC TEXT
+========================= */
+
+#musicStatus {
+
+    margin-top: 9px;
+
+    color: #8b4555;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   BOTTOM HEARTS
+========================= */
+
+.bottom-hearts {
+
+    margin-top: 25px;
+
+    color: #7b1e32;
+
+    font-size: 20px;
+
+    letter-spacing: 8px;
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.background-heart {
+
+    position: fixed;
+
+    color: #7b1e32;
+
+    opacity: 0.18;
+
+    font-size: 50px;
+
+    pointer-events: none;
+
+    animation:
+        floating
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.heart1 {
+
+    left: 5%;
+
+    top: 15%;
+
+}
+
+
+.heart2 {
+
+    right: 5%;
+
+    top: 30%;
+
+    animation-delay: 1s;
+
+}
+
+
+.heart3 {
+
+    left: 8%;
+
+    bottom: 10%;
+
+    animation-delay: 2s;
+
+}
+
+
+/* =========================
+   CARD ANIMATION
+========================= */
+
+@keyframes showCard {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================
+   HEART ANIMATION
+========================= */
+
+@keyframes floating {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-20px);
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+
+    body {
+
+        padding:
+            15px 10px;
+
+    }
+
+
+    .card {
+
+        padding:
+            25px 15px;
+
+        border-radius:
+            23px;
+
+    }
+
+
+    .message {
+
+        padding:
+            16px;
+
+    }
+
+
+    .message p {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.7;
+
+    }
+
+
+    h2 {
+
+        font-size:
+            1.5rem;
+
+    }
+
+
+    .small-title {
+
+        letter-spacing:
+            2px;
+
+    }
+
+}
